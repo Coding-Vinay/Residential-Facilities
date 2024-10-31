@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Residential Booking</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="home">
+        <h2>Welcome to Hostel Booking</h2>
+        <p>Please fill in the details below to proceed with your booking:</p>
+
+        <!-- Name Input -->
+        <form id="booking-form">
+            <label for="name"><b>Enter Your Name:</b></label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </form>
+    </section>
+
+    <!-- Room Booking Section -->
+    <section id="booking-form">
+        <form id="servicesForm">
+            <h2>Room Booking</h2>
+
+            <!-- Room Type Selection -->
+            <label for="roomType">Room Type</label>
+            <select id="roomType" name="roomType" required>
+                <option value="">--Select Room Type--</option>
+                <option value="1 Seater (AC)">1 Seater (AC)</option>
+                <option value="1 Seater (Non-AC)">1 Seater (Non-AC)</option>
+                <option value="2 Seater (AC)">2 Seater (AC)</option>
+                <option value="2 Seater (Non-AC)">2 Seater (Non-AC)</option>
+                <option value="3 Seater (AC)">3 Seater (AC)</option>
+                <option value="3 Seater (Non-AC)">3 Seater (Non-AC)</option>
+                <option value="4 Seater (AC)">4 Seater (AC)</option>
+                <option value="4 Seater (Non-AC)">4 Seater (Non-AC)</option>
+            </select>
+
+            <!-- Mess Booking Section -->
+            <h2>Mess Booking</h2>
+            <label for="messType">Mess Type</label>
+            <select id="messType" name="messType" required>
+                <option value="">--Select Mess Plan--</option>
+                <option value="South Indian - 2 Meals">South Indian - 2 Meals</option>
+                <option value="South Indian - 3 Meals">South Indian - 3 Meals</option>
+                <option value="South Indian - 4 Meals">South Indian - 4 Meals</option>
+                <option value="North Indian - 2 Meals">North Indian - 2 Meals</option>
+                <option value="North Indian - 3 Meals">North Indian - 3 Meals</option>
+                <option value="North Indian - 4 Meals">North Indian - 4 Meals</option>
+            </select>
+
+            <!-- Gym Booking Section -->
+            <h2>Gym Booking</h2>
+            <label for="gymType">Gym Subscription</label>
+            <select id="gymType" name="gymType" required>
+                <option value="">--Select Gym Subscription--</option>
+                <option value="None">None</option>
+                <option value="Semester">Semester</option>
+                <option value="Yearly">Yearly</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="submitForm()">Submit & Generate Certificate</button>
+        </form>
+        <div id="a">
+        <h3>To view price list scan the qr below :</h3>
+        <img src="qr_PRICE.png">
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Residential Booking Services</p>
+        <cite>-- Vinay</cite>
+    </footer>
+
+    <!-- JavaScript for form submission -->
+    <script src="script.js"></script>
+</body>
+</html>

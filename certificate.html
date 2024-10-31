@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Certificate of Availing Services</h1>
+    </header>
+
+    <!-- Certificate Section -->
+    <section id="certificate-section">
+        <div id="certificate">
+            <img src="LOGO.png" height="100" width="200" alt="Logo" id="certificate-logo">
+            <h1>Facilities Booking Certificate</h1>
+            <p>This is to certify that <b><u><span id="certName"></span></u></b> has availed the following services:</p>
+            <ul>
+                <li><strong>Room Type:</strong> <span id="certRoom"></span></li>
+                <li><strong>Mess Type:</strong> <span id="certMess"></span></li>
+                <li><strong>Gym Subscription:</strong> <span id="certGym"></span></li>
+            </ul>
+            <p>Date: <span id="certDate"></span></p>
+            <p>
+                <small>Auto-Verified by</small><br>
+                <b><i><u>VINAY K</u></i></b><br>
+                <small>(This is an auto-generated receipt from our Portal)</small>
+            </p>
+        </div>
+        <div id="download-buttons">
+            <button onclick="downloadImage()">Download as Image (PNG)</button>
+        </div>
+    </section>
+
+    <!-- Additional Facilities Booking Section -->
+    <section id="additional-booking">
+        <h2>Want to Book More Facilities?</h2>
+        <p>Scan the QR code below, and we will contact you soon.</p>
+        <img src="qr_more.png" alt="QR Code" width="150" height="150">
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Residential Booking Services</p>
+        <cite>-- Vinay</cite>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- html2canvas for capturing certificate as image -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Link to Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Residential Facilities Booking</h1>
+        <div id="user-menu">
+            <button onclick="toggleUserMenu()"><b>User ⮟</b></button>
+            <div id="user-options" style="display: none;">
+                <button onclick="signIn()">Sign In</button>
+                <button onclick="rateUs()">Rate Us</button>
+            </div>
+        </div>
+        
+        <div id="signInModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Sign In</h3>
+                <input type="text" id="usernameInput" placeholder="Enter your name" />
+                <button onclick="submitUsername()">Submit</button>
+            </div>
+        </div>
+        
+
+    </header>
+
+  
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+        <h2>Welcome to the Hostel Booking Portal</h2>
+        <p>
+            Book your residential services using our Portal. This includes hostels, mess, and gym.
+            <br><br>
+            <b>Our key benefits:</b><br><br>
+            1. Comfortable rooms<br>
+            2. Customizable mess plan<br>
+            3. Flexible gym membership plan<br>
+            4. Services tailored to your needs<br>
+            5. Easy booking for students, faculty, and staff<br>
+        </p>
+    </section>
+
+
+    <!-- Category Selection Section -->
+    <section id="selection-section">
+        <h2>Select Your Category</h2>
+        <form id="userSelectionForm">
+            <label for="userType">Choose an option:</label>
+            <select id="userType" name="userType" required>
+                <option value="">--Select--</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="staff">Staff</option>
+            </select>
+            <button type="button" onclick="redirectToBooking()">Proceed</button>
+        </form>
+    </section>
+
+    <!-- Information Section -->
+    <section id="info-section">
+        <h2>Booking Information</h2>
+
+        <div class="info-card">
+            <img src="room.jpg" alt="Student">
+            <h3>For Students</h3>
+            <p>Students can choose from a range of single, double, triple, or four-seater room options with both AC and Non-AC availability. Mess services include North Indian and South Indian food with flexible meal plans. Gym memberships are available for monthly, semester, and yearly terms.</p>
+        </div>
+
+        <div class="info-card">
+            <img src="teachers.jpg" alt="Faculty">
+            <h3>For Faculty</h3>
+            <p>Faculty members have access to premium room options and can avail mess and gym services. The hostel provides faculty-specific accommodation with privacy and comfort. Mess plans and gym memberships are fully customizable.</p>
+        </div>
+
+        <div class="info-card">
+            <img src="staff.jpg" alt="Staff">
+            <h3>For Staff</h3>
+            <p>Staff members can book rooms based on their specific requirements. Mess and gym services are available with flexible payment plans, ensuring affordability and convenience. Choose from AC or Non-AC rooms and enjoy a balanced diet with our mess options.</p>
+        </div>
+
+        <div class="info-card">
+            <h1><a href="facilities.html">More Facitilies</a> </h1><br>
+            <img src="library.jpg" height="200" width="400"><br><strong>Library</strong><br> 
+            <img src="transport.jpg" height="200" width="400"><br><b>Transport</b>
+            
+        </div>
+    </section>
+
+    <!-- Query Section -->
+    <section id="query-section">
+        <h2>Have a Question?</h2>
+        <form id="queryForm" onsubmit="submitQuery(event)">
+            <input type="text" id="queryInput" placeholder="Type your query here..." required>
+            <button type="submit">Submit Query</button>
+        </form>
+        <div id="responseMessage" style="margin-top: 10px;"></div> <!-- Success message container -->
+    </section>
+
+    
+    <!-- Contact Us Section -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <p>We are here to help you 24/7.</p>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> Phone: +123-456-7890</p>
+            <p><i class="fas fa-envelope"></i> Email: info@hostelbooking.com</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://in.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Residential Booking Services</p>
+        <cite>-- Vinay</cite>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- jQuery (required for Slick Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
